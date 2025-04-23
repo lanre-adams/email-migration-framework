@@ -1,8 +1,5 @@
 
 <#
-.SYNOPSIS
-    Installer for the Email Migration Automation Framework
-
 .DESCRIPTION
     Sets up environment, installs dependencies, and optionally schedules automation tasks.
 #>
