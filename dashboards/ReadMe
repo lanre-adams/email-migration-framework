@@ -1,0 +1,4 @@
+​Creating a Power BI report programmatically is a complex task due to the proprietary nature of the .pbix file format. 
+Currently, there is no officially supported method to generate .pbix files entirely through code. However, 
+Microsoft has introduced the Power BI Project (.pbip) format, which allows for version control and collaborative development of Power BI reports.
+This format separates the report and dataset definitions into individual files, making it easier to manage and modify them programmatically.
