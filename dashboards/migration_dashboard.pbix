@@ -1,1 +1,15 @@
-# PBIX dashboard file placeholder
+import pandas as pd
+
+# Create a sample migration_log.csv for use in Power BI .pbix file
+sample_data = pd.DataFrame({
+    "Timestamp": pd.date_range(start="2025-01-01", periods=10, freq="D").strftime("%Y-%m-%d %H:%M:%S"),
+    "Mailbox": [f"user{i}@school.org" for i in range(10)],
+    "Status": ["Success", "Failed", "Success", "Success", "Failed", "Success", "Success", "Failed", "Success", "Success"],
+    "Duration": [12, 0, 15, 20, 0, 18, 22, 0, 14, 17],
+    "RetryCount": [0, 3, 0, 0, 3, 0, 0, 3, 0, 0],
+    "Error": ["", "Timeout", "", "", "Corrupted Items", "", "", "Mailbox Locked", "", ""]
+})
+
+file_path = "/mnt/data/migration_log.csv"
+sample_data.to_csv(file_path, index=False)
+file_path
